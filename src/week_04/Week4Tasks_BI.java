@@ -182,11 +182,10 @@ public class Week4Tasks_BI {
         StringBuilder result = new StringBuilder();
         Set<Character> set = new HashSet<>();
         for (char c : str.toCharArray()) {
-            if (set.contains(c)) {
-                continue;
+            if (!set.contains(c)) {
+                set.add(c);
+                result.append(c);
             }
-            set.add(c);
-            result.append(c);
         }
         return result.toString();
     }
